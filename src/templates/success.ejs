@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/success.css" type="text/css">
+  <link rel="stylesheet" href="css/footer.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <title>Demo-Success</title>
+</head>
+<body class="flex-row success">
+  
+  <%- include('./partials/question/leftSidebar.ejs') -%>
+ 
+  <div class="flex-col flex-1">
+    <div class="success-body">
+      <div class="success-body__arrow"></div>
+      <div class="success-body__wrap">
+        <div class="success-checkmark"> </div>
+        <div class="success-text">THANK YOU!</div>
+        <div class="success-message">
+          You're extra feedback has been sent.<br/>
+          Have a lovely day.
+        </div>
+      </div>
+    </div>      
+      <%- include('./partials/footer.ejs') -%>
+    </div>
+  
+  </div>
+</body>
+</html>

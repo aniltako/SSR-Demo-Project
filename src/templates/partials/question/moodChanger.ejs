@@ -1,0 +1,26 @@
+<!-- question-mood-changer -->
+
+<div class="question-mood-value__changer u-hide">
+  <div class="question-mood-value__changer__title">
+    Did you make a mistake? Please select your correct mood:
+  </div>
+  <div class="question-mood-value__changer__smileys js-smileys">
+    <% moods.forEach(function(mood, index) {  %>
+      <button type="button" 
+        class="question-mood-value__button js-button <% if(`${smiley}` === `${index+1}`){ %> <%='is-active'%> <% } %> is-<%= index+1 %>" 
+        onClick="onChangeMood('<%= index+1 %>')">
+        <% if (mood.id === 1) { %>
+          <img src="assets/VeryUnhappy.svg" />
+        <% } else if (mood.id === 2) { %>
+          <img src="assets/Unhappy.svg" />
+        <% } else if (mood.id === 3) { %>
+          <img src="assets/Neutral.svg" />
+        <% }else if (mood.id === 4) { %>
+          <img src="assets/Happy.svg" />
+        <% }else if (mood.id === 5) { %>
+          <img src="assets/VeryHappy.svg" />
+        <% } %>
+      </button>
+    <% }); %>
+  </div>
+</div>

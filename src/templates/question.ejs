@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/question.css" type="text/css">
+  <link rel="stylesheet" href="css/footer.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <title>Demo-Question</title>
+</head>
+<body class="flex-row question">
+  
+  <%- include('./partials/question/leftSidebar.ejs') -%>
+ 
+  <div class="flex-col flex-1">
+  
+    <%- include('./partials/progressBar.ejs') -%>
+
+    <div class="question-body">
+      <%- include('./partials/question/moodChanger.ejs', {moods: moods, smiley: smiley}) -%>
+
+      <%- include('./partials/question/moodValue.ejs', {moods: moods, smiley: smiley, companyName: companyName}); -%>
+
+      <form class="question-form">
+        <h1 class="question-mood-name js-moodName">
+          Do you agree with the following statement;
+        </h1>
+
+        <!-- question-form-poll -->
+        <% questions.forEach(function(question, index) {  %>
+          <div class="question-form-poll">
+            <!-- question-form-poll-header -->
+            <div class="question-form-poll__arrow"></div>
+            <div class="question-form-poll__suffix question-form-poll__suffix--top-left">
+              <%= index+1 %> of <%= questions.length%>
+            </div>
+            <div class="question-form-poll__header">
+              <h4 class="question-form-poll__name"><%= question.text %></h4>
+            </div>
+            <!-- end question-form-poll-header -->
+
+            <!-- start of question-form-poll-group-->
+            <div class="question-form-poll__group">
+              
+              <%- include('./partials/utils/starsPollForm.ejs', {questionId: question.id}) -%>
+
+              <div class="question-form-poll__group__labels js-labels">
+                <span>Disagree</span>
+                <span>Agree</span>
+              </div>
+              <button type="button" class="question-form-poll__group__add-comment is-hidden js-addComment">
+                Add comment
+              </button>
+              <textarea class="question-textarea js-textarea u-hide" placeholder="Anything to add or suggest?" style="height: calc(0px - 0rem);"></textarea>
+            </div>
+            <!-- end of question-form-poll-group -->
+          </div>
+        <% }); %>
+            
+        <%- include('./partials/question/replyForm.ejs') -%>
+
+        <button id="send-reply-btn" class="js-button send-button">
+          Send
+        </button>
+      </form>
+    </div>
+    
+    <%- include('./partials/footer.ejs') -%>
+  
+  </div>
+  <% var smiley = smiley %> 
+  <script src="js/utils.js"></script>
+  <script src="js/question.js"></script>
+</body>
+</html>

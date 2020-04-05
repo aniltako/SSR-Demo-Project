@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-size: 62.5%;
+  font-family: Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+  font-weight: 400;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1 1
+}
+
+[type=submit], [type=reset], button, html [type=button] {
+  -webkit-appearance: button;
+}
+
+.u-hide {
+  display: none!important;
+}
+
+[type=button], [type=reset], [type=submit], button {
+  cursor: pointer;
+}
+
+button, input, select, textarea {
+  outline: none;
+}
+
+button, select {
+  text-transform: none;
+}
+
+select, button, input {
+  overflow: visible;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.u-green1 {
+  background-color: #2ce6ce;
+}

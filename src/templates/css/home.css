@@ -1,0 +1,129 @@
+body {
+  min-height: 100%;
+  background-color: #f7f7f7;
+  -webkit-transition: translate3d(0,0,0);
+  transition: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+.demo-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.demo-header {
+  width: 60rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logo-wrap {
+  position: relative;
+  width: 7rem;
+}
+
+.logo-wrap > img {
+  height: 6rem;
+  width: auto;
+  position: relative;
+}
+
+.logo-wrap > div {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 7rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.demo-header > .moto {
+  color: #606060;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.demo-body {
+  width: 60rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
+
+.demo-body__title {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #606060;
+}
+
+.demo-body__title > span {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.demo-body__question {
+  margin-top: 1.5rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #606060;
+}
+
+.demo-body__moods {
+  margin-top: 1.5rem;
+}
+
+.demo-body__moods > a > img {
+  height: 8.25rem;
+  width: 8rem;
+  padding: 0.2rem;
+  border-radius: 50%;
+  box-shadow: 10px -10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px -10px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 2px rgba(0,0,0,0.2);
+  -o-box-shadow: 10px -10px rgba(0,0,0,0.6);
+}
+
+.demo-body__moods > a > img:hover {
+  cursor: pointer;
+}
+
+.demo-body__anonymous {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #2ce6ce;
+  display: inline-block;
+}
+
+.demo-footer {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+}
+
+.demo-footer__motto {
+  color: #1b828e;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.demo-footer__copy {
+  color: #fff;
+}

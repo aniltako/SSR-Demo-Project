@@ -1,0 +1,35 @@
+/* footer */
+
+.footer {
+  padding: 3rem 2rem 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+  -ms-flex: 0 0 7.2rem;
+  flex: 0 0 7.2rem;
+}
+
+.footer.is-leftSidebar {
+  -ms-flex: 0 0 8rem;
+  flex: 0 0 8rem;
+  font-size: 2.6rem;
+  text-align: left;
+  padding-left: 4.8rem;
+}
+
+.footer__company {
+  color: #fff;
+  margin-bottom: 1.4rem;
+}
+
+.footer__links {
+  margin-bottom: 1.4rem;
+}
+
+.footer__links>a {
+  color: #2ce6ce;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: #fff;
+}

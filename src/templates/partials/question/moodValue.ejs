@@ -1,0 +1,41 @@
+<!-- question-mood-value-->
+
+<div class="question-mood-value is-<%= smiley %>" <%=`data-value=${smiley}`%>>
+  <% moods.forEach(function(mood, index) {  %>
+    <div class="question-mood-value__smiley is-<%= index+1 %>">
+      <a class="mood-button" data-value="<%= index+1 %>">
+        <div>
+          <img src="assets/EditIcon.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        </div>
+        <% if (mood.id === 1) { %>
+          <img src="assets/VeryUnhappy.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        <% } else if (mood.id === 2) { %>
+          <img src="assets/Unhappy.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        <% } else if (mood.id === 3) { %>
+          <img src="assets/Neutral.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        <% }else if (mood.id === 4) { %>
+          <img src="assets/Happy.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        <% }else if (mood.id === 5) { %>
+          <img src="assets/VeryHappy.svg" onClick="onClickEditMood(`<%= index+1 %>`)"/>
+        <% } %>
+      </a>
+    </div>
+  <% }); %>
+  <!-- start moode title -->
+  <div class="question-title">
+    <h4 class="question-title__text">
+      <% moods.forEach(function(mood) {  %>
+        <span class="question-mood-value__smiley-name is-<%= mood.id %>"> <%= mood.text %> </span>
+      <% }); %>
+      Thanks you for your Feedback.
+    </h4>
+    <div class="question-title__note">
+      Your answers will
+      <strong>always remain anonymous</strong>
+    </div>
+  </div>
+  <!-- end mood title-->
+  <div class="question-mood-value__right">
+    <div class="question-mood-value__company-name"><%= companyName%></div>
+  </div>
+</div>

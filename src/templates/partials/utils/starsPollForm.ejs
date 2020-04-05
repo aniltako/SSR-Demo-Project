@@ -1,0 +1,10 @@
+<!-- form-start-poll -->
+<div class="question-form-stars question-form-stars--10-scale js-poll" data-id="<%= questionId %>">
+  <% for (var i = 10; i > 0 ; i--) { %>
+    <div class="question-form-stars__item js-poll-item color u-no-touch" data-value="<%= i %>">
+      <div class="question-form-stars__item__inner color">
+        <%- include('./starSVG.ejs') -%>
+      </div>
+    </div>
+  <% } %>
+</div>
