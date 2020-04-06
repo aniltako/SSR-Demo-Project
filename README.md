@@ -4,13 +4,15 @@ Simple demo application using Node, fastify and ejs.
 
 ## Installation
 
-Use the package manager yarn( version >=1.21.1 ).
+Node version >=8.0.0
+
+Use the package manager yarn( version >=1.21.1)
 
 ```bash
 cd projectDir/
 yarn
 ```
-For npm ( >=6.7.0 )
+For npm
 
 ```bash
 cd projectDir/
